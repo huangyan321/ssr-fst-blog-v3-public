@@ -1,0 +1,141 @@
+.article__content, .list__article__item__abstract
+  color var(--el-text-color-primary)
+  font-size 15px
+  width 100%
+  inline-height 1.8em
+  a:not(.nonstyle)
+    text-decoration none
+    color #3A97FF
+    box-shadow 0 1px 0 #555
+    &:hover
+      box-shadow 0 1px 0 #3A97FF
+  h1, h2, h3, h4, h5, h6
+    color var(--el-text-h)
+    margin-block 0
+    margin-inline 0
+    margin-top 20px
+    margin-bottom 15px
+    line-height 1.2em
+  h1
+    font-size 1.4em
+  h2
+    font-size 1.3em
+  h3
+    font-size 1.2em
+  h4
+    font-size 1.1em
+  h5
+    font-size 1em
+  h6
+    font-size 0.9em
+  p
+    margin-block 0
+    line-height 1.8em
+    &:not(:last-child)
+      margin 0 0 10px
+  img
+    max-width 100%
+  blockquote
+    margin-block 0
+    margin-inline 0
+    padding 3px 10px
+    background-color var(--hljs-blockquote-bg)
+    border-left 7px solid #999
+    &>p
+      margin 0 0
+  kbd
+    padding 1px 3px
+    background-color #eee
+    box-shadow 1px 2px #999
+    border-radius 3px
+  mark, code:not(.hljs)
+    padding 1px 3px
+    border-radius 3px
+  table
+    text-align left
+    border-collapse collapse
+  th, td
+    padding 5px
+    border 1px solid #eee
+  tr:nth-child(even)
+    background-color #eee
+  th
+    font-weight 400
+    background-color #ddd
+  table
+    margin 1em 0
+    width 100%
+.kaex > .katex-html
+  white-space normal
+.katex .base
+  margin-top 5px
+  margin-bottom 5px
+pre
+  display block
+  overflow-x auto
+  padding 0.5em
+  color #adbac7
+  background #22272e !important
+code.hljs
+  padding 3px 5px
+/*
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Colors taken from GitHub's CSS
+*/
+.hljs
+  color var(--hljs-color)
+  background var(--hljs-bg)
+.hljs-doctag, .hljs-keyword, .hljs-meta .hljs-keyword, .hljs-template-tag, .hljs-template-variable, .hljs-type, .hljs-variable.language_
+  /* prettylights-syntax-keyword */
+  color var(--hljs-keyword)
+.hljs-title, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-title.function_
+  /* prettylights-syntax-entity */
+  color var(--hljs-title)
+.hljs-attr, .hljs-attribute, .hljs-literal, .hljs-meta, .hljs-number, .hljs-operator, .hljs-variable, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-id
+  /* prettylights-syntax-constant */
+  color var(--hljs-attr)
+.hljs-regexp, .hljs-string, .hljs-meta .hljs-string
+  /* prettylights-syntax-string */
+  color var(--hljs-regexp)
+.hljs-built_in, .hljs-symbol
+  /* prettylights-syntax-variable */
+  color var(--hljs-built_in)
+.hljs-comment, .hljs-code, .hljs-formula
+  /* prettylights-syntax-comment */
+  color var(--hljs-comment)
+.hljs-name, .hljs-quote, .hljs-selector-tag, .hljs-selector-pseudo
+  /* prettylights-syntax-entity-tag */
+  color var(--hljs-name)
+.hljs-subst
+  /* prettylights-syntax-storage-modifier-import */
+  color var(--hljs-subst)
+.hljs-section
+  /* prettylights-syntax-markup-heading */
+  color var(--hljs-section)
+  font-weight bold
+.hljs-bullet
+  /* prettylights-syntax-markup-list */
+  color var(--hljs-bullet)
+.hljs-emphasis
+  /* prettylights-syntax-markup-italic */
+  color var(--hljs-emphasis) 
+  font-style italic
+.hljs-strong
+  /* prettylights-syntax-markup-bold */
+  color var(--hljs-strong-color)
+  font-weight bold
+.hljs-addition
+  /* prettylights-syntax-markup-inserted */
+  color var(--hljs-addition-color)
+  background-color var(--hljs-addition-bg)
+.hljs-deletion
+  /* prettylights-syntax-markup-deleted */
+  color var(--hljs-deletion-color)
+  background-color var(--hljs-deletion-bg)
+.hljs-char.escape_, .hljs-link, .hljs-params, .hljs-property, .hljs-punctuation, .hljs-tag
+  /* purposely ignored */

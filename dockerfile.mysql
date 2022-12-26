@@ -1,0 +1,13 @@
+# 指定我们的基础镜像是node，版本是v8.0.0
+ FROM mysql:8.0.31
+
+# 指定制作我们的镜像的联系人信息（镜像创建者）
+ MAINTAINER huangyan321
+# 将根目录下的文件都copy到container（运行此镜像的容器）文件系统的app文件夹下
+ COPY docker/sh/setup.sh /mysql/setup.sh
+ COPY docker/sh/docker_back_sql_inner.sh /mysql/docker_back_sql_inner.sh
+ COPY mysql/init/db_myblog.sql /mysql/db_myblog.sql
+ COPY mysql/privileges/privileges.sql /mysql/privileges.sql
+
+# 容器启动时执行的命令，类似npm run start
+ CMD ["sh", "/mysql/setup.sh"]

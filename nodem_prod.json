@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "client/**/*.js",
+    "server/**/*.ts"
+  ],
+  "ext": "js,ts",
+  "exec": "ts-node -r tsconfig-paths/register server/bin/www.ts",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

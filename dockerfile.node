@@ -1,0 +1,24 @@
+# 指定我们的基础镜像是node，版本是v8.0.0
+ FROM node:16-alpine
+# 指定制作我们的镜像的联系人信息（镜像创建者）
+ MAINTAINER huangyan321
+# 将根目录下的文件都copy到container（运行此镜像的容器）文件系统的app文件夹下
+ COPY package.json /app/dependencies/package.json
+ COPY docker/sh/start.sh /app/start.sh
+
+# 容器内在dependencies安装依赖包
+ RUN cd /app/dependencies \
+     && npm install --registry=https://registry.npmmirror.com\
+     && mkdir /app/work \
+# 容器内移动依赖包到work目录
+     && ln -s /app/dependencies/node_modules /app/work/node_modules
+# 将当前目录中所有文件夹拷贝到work目录
+ COPY ./ /app/work/
+# 打包
+ RUN cd /app/work
+# 到工作目录
+ WORKDIR /app/work
+# 配置环境变量
+ ENV NODE_ENV production
+# 容器启动时执行的命令，类似npm run start
+ CMD sh /app/start.sh

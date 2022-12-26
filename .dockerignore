@@ -1,0 +1,15 @@
+/node_modules/
+/client/dist/
+.DS_Store
+  npm-debug.log*
+  selenium-debug.log
+  .nuxt/
+  *.tar
+  *.md
+
+  # Editor directories and files
+  .idea
+  *.suo
+  *.ntvs*
+  *.njsproj
+  *.sln

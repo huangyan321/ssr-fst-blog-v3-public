@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "client/**/*.js",
+    "client/build/setup-dev-server.js",
+    "server/**/*.ts"
+  ],
+  "ignore": ["client/build/**/*.js"],
+  "ext": "js,ts",
+  "exec": "ts-node -r tsconfig-paths/register server/bin/www.ts",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
